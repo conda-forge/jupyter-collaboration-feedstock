@@ -26,7 +26,7 @@ requirements:
     - python >=3.8
     - jupyter_server >=2.0.0,<3.0.0
     - jupyter_ydoc >=1.0.1,<2.0.0
-    - ypy-websocket >=0.8.3,<0.9.0
+    - ypy-websocket >=0.12.1,<0.13.0
     - jupyter_events
     - jupyter_server_fileid >=0.6.0,<1
 
@@ -48,13 +48,13 @@ test:
     - cat labextensions | grep "collaboration-extension.*OK.*jupyter_collaboration"  # [unix]
 
 about:
-  home: https://github.com/jupyterlab/jupyter_collaboration
+  home: https://github.com/jupyterlab/jupyter-collaboration
   summary: A Jupyter extension providing support for collaborative features in JupyterLab
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   doc_url: https://jupyterlab-realtime-collaboration.readthedocs.io
-  dev_url: https://github.com/jupyterlab/jupyter_collaboration
+  dev_url: https://github.com/jupyterlab/jupyter-collaboration
 
 extra:
   recipe-maintainers:
