@@ -1,5 +1,5 @@
 {% set name = "jupyter-collaboration" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: 7a79651d17898564fe13ad4c31bde50059e7087346339045159126e64dd565bd
+  sha256: 71fec1a45e964a81d02505b42177690801937645fd44d599e09a2f4c7bdc3e1a
 
 build:
   noarch: python
@@ -49,7 +49,7 @@ test:
 
 about:
   home: https://github.com/jupyterlab/jupyter_collaboration
-  summary: 'A Jupyter extension providing support for collaborative features in JupyterLab'
+  summary: A Jupyter extension providing support for collaborative features in JupyterLab
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
