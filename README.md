@@ -3,13 +3,13 @@ About jupyter-collaboration-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-collaboration-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyterlab/jupyter_collaboration
+Home: https://github.com/jupyterlab/jupyter-collaboration
 
 Package license: BSD-3-Clause
 
 Summary: A Jupyter extension providing support for collaborative features in JupyterLab
 
-Development: https://github.com/jupyterlab/jupyter_collaboration
+Development: https://github.com/jupyterlab/jupyter-collaboration
 
 Documentation: https://jupyterlab-realtime-collaboration.readthedocs.io
 

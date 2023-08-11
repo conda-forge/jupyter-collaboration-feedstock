@@ -1,5 +1,5 @@
 {% set name = "jupyter-collaboration" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: 71fec1a45e964a81d02505b42177690801937645fd44d599e09a2f4c7bdc3e1a
+  sha256: dcec5db89f774e66d2fdf2922a6557b39be3d8864c5f932a28f4de1a494509b3
 
 build:
   noarch: python
@@ -27,8 +27,10 @@ requirements:
     - jupyter_server >=2.0.0,<3.0.0
     - jupyter_ydoc >=1.0.1,<2.0.0
     - ypy-websocket >=0.12.1,<0.13.0
-    - jupyter_events
+    - jupyter_events <0.7.0
     - jupyter_server_fileid >=0.6.0,<1
+    - jsonschema <4.18.0
+    - jsonschema-with-format-nongpl
 
 test:
   imports:
