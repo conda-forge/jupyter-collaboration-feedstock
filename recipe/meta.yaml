@@ -1,5 +1,5 @@
 {% set name = "jupyter-collaboration" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: dcec5db89f774e66d2fdf2922a6557b39be3d8864c5f932a28f4de1a494509b3
+  sha256: aa17023c0807941c2df8bb7c35d0daf993e134da2d0af36dcfd590c7a387bce7
 
 build:
   noarch: python
