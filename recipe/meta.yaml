@@ -1,17 +1,17 @@
-{% set name = "jupyter-collaboration" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
+{% set jupyterlab_version = ">=4.0.5" %}
 
 package:
-  name: {{ name|lower }}
+  name: jupyter-collaboration
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: dcec5db89f774e66d2fdf2922a6557b39be3d8864c5f932a28f4de1a494509b3
+  url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
+  sha256: aa17023c0807941c2df8bb7c35d0daf993e134da2d0af36dcfd590c7a387bce7
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -21,23 +21,24 @@ requirements:
     - hatchling >=1.4.0
     - hatch-nodejs-version
     - hatch-jupyter-builder
-    - jupyterlab >=4.0.0
+    - jupyterlab {{ jupyterlab_version }}
   run:
     - python >=3.8
     - jupyter_server >=2.0.0,<3.0.0
     - jupyter_ydoc >=1.0.1,<2.0.0
     - ypy-websocket >=0.12.1,<0.13.0
-    - jupyter_events <0.7.0
-    - jupyter_server_fileid >=0.6.0,<1
-    - jsonschema <4.18.0
-    - jsonschema-with-format-nongpl
+    - jupyter_events >=0.7.0
+    - jupyter_server_fileid >=0.7.0,<1
+    - jsonschema >=4.18.0
+  run_constrained:
+    - jupyterlab {{ jupyterlab_version }}
 
 test:
   imports:
     - jupyter_collaboration
   requires:
     - pip
-    - jupyterlab >=4
+    - jupyterlab
   commands:
     - pip check
     # jupyter_server server extension
@@ -54,7 +55,9 @@ about:
   summary: A Jupyter extension providing support for collaborative features in JupyterLab
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file: 
+    - LICENSE
+    - jupyter_collaboration/labextension/static/third-party-licenses.json
   doc_url: https://jupyterlab-realtime-collaboration.readthedocs.io
   dev_url: https://github.com/jupyterlab/jupyter-collaboration
 
