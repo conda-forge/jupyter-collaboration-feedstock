@@ -1,4 +1,5 @@
 {% set version = "1.2.0" %}
+{% set jupyterlab_version = ">=4.0.5" %}
 
 package:
   name: jupyter-collaboration
@@ -20,7 +21,7 @@ requirements:
     - hatchling >=1.4.0
     - hatch-nodejs-version
     - hatch-jupyter-builder
-    - jupyterlab >=4.0.0
+    - jupyterlab {{ jupyterlab_version }}
   run:
     - python >=3.8
     - jupyter_server >=2.0.0,<3.0.0
@@ -29,13 +30,15 @@ requirements:
     - jupyter_events >=0.7.0
     - jupyter_server_fileid >=0.7.0,<1
     - jsonschema >=4.18.0
+  run_constrained:
+    - jupyterlab {{ jupyterlab_version }}
 
 test:
   imports:
     - jupyter_collaboration
   requires:
     - pip
-    - jupyterlab >=4
+    - jupyterlab
   commands:
     - pip check
     # jupyter_server server extension
