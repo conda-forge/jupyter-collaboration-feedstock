@@ -1,17 +1,16 @@
-{% set name = "jupyter-collaboration" %}
 {% set version = "1.2.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: jupyter-collaboration
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_collaboration-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
   sha256: aa17023c0807941c2df8bb7c35d0daf993e134da2d0af36dcfd590c7a387bce7
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -25,12 +24,11 @@ requirements:
   run:
     - python >=3.8
     - jupyter_server >=2.0.0,<3.0.0
-    - jupyter_ydoc >=1.0.1,<2.0.0
+    - jupyter_ydoc >=1.1.0a0,<2.0.0
     - ypy-websocket >=0.12.1,<0.13.0
-    - jupyter_events <0.7.0
-    - jupyter_server_fileid >=0.6.0,<1
-    - jsonschema <4.18.0
-    - jsonschema-with-format-nongpl
+    - jupyter_events >=0.7.0
+    - jupyter_server_fileid >=0.7.0,<1
+    - jsonschema >=4.18.0
 
 test:
   imports:
@@ -54,7 +52,9 @@ about:
   summary: A Jupyter extension providing support for collaborative features in JupyterLab
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file: 
+    - LICENSE
+    - jupyter_collaboration/labextension/static/third-party-licenses.json
   doc_url: https://jupyterlab-realtime-collaboration.readthedocs.io
   dev_url: https://github.com/jupyterlab/jupyter-collaboration
 
