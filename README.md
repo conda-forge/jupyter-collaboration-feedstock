@@ -9,8 +9,6 @@ Package license: BSD-3-Clause
 
 Summary: A Jupyter extension providing support for collaborative features in JupyterLab
 
-Development: https://github.com/jupyterlab/jupyter-collaboration
-
 Documentation: https://jupyterlab-realtime-collaboration.readthedocs.io
 
 Current build status
