@@ -1,4 +1,5 @@
-{% set version = "2.0.0" %}
+{% set jupyterlab_version = ">=4.0.5" %}
+{% set version = "2.0.1" %}
 {% set jupyterlab_version = ">=4.0.5" %}
 
 package:
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: eed21d0977045f074f80ee47c678c094f19c81567602d50a7ad858ab18a9958f
+  sha256: 51ce7b93185a8ff0d08b9717fa48d5e0f1917056f15a6cdcf81db8f3ed550182
 
 build:
   noarch: python
