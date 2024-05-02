@@ -1,6 +1,4 @@
-{% set jupyterlab_version = ">=4.0.5" %}
-{% set jupyterlab_version = ">=4.0.5" %}
-{% set version = "2.0.11" %}
+{% set version = "2.1.0" %}
 {% set jupyterlab_version = ">=4.0.5" %}
 
 package:
@@ -9,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: 2bb1cde72cda758e526fa49f9ff2bf402ceed7801c0c4187abe4d21e42e18136
+  sha256: aea653e1a83b5bf62d6c3f74f4c7e49dba03cc76b667a38e1e137f71dc30e20c
 
 build:
   noarch: python
@@ -28,7 +26,7 @@ requirements:
     - python >=3.8
     - jupyter_server >=2.0.0,<3.0.0
     - jupyter_ydoc >=2.0.1,<3.0.0
-    - pycrdt-websocket >=0.12.6,<0.13.0
+    - pycrdt-websocket >=0.13.1,<0.14.0
     - jupyter_events >=0.10.0
     - jupyter_server_fileid >=0.7.0,<1
     - jsonschema >=4.18.0
