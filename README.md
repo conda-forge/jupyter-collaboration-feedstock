@@ -145,7 +145,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/jupyterlab](https://github.com/conda-forge/jupyterlab/)
+* [@conda-forge/jupyterlab](https://github.com/orgs/conda-forge/teams/jupyterlab/)
 * [@davidbrochart](https://github.com/davidbrochart/)
 * [@fcollonval](https://github.com/fcollonval/)
 * [@hbcarlos](https://github.com/hbcarlos/)
