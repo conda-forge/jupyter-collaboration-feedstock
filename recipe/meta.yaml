@@ -45,13 +45,14 @@ test:
     - m2-grep  # [win]
   commands:
     - pip check
-    # jupyter_server server extension
+    # server extension
     - jupyter server extension list
-    - jupyter server extension list 1>server_extensions 2>&1
-    - grep -iE "jupyter_collaboration.*OK" server_extensions
     # labextensions
-    - jupyter labextension list --verbose
-    - jupyter labextension list --verbose 1>labextensions 2>&1 
+    - jupyter labextension list
+    # check
+    - jupyter server extension list 1>server_extensions 2>&1
+    - jupyter labextension list 1>labextensions 2>&1 
+    - grep -iE "jupyter_collaboration.*OK" server_extensions
     - grep -iE "collaboration-extension.*OK.*jupyter_collaboration" labextensions
 
 about:
