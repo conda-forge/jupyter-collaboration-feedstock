@@ -1,7 +1,7 @@
 {% set version = "2.1.4" %}
 
 # the `if` block helps the bot avoid duplicating this line over and over...
-{% if 1 %}{% set jupyterlab_version = ">=4.0.5,<5" %}{% endif %}
+{% if 1 %}{% set jupyterlab_version = ">=4.0.5,<4.2" %}{% endif %}
 
 package:
   name: jupyter-collaboration
