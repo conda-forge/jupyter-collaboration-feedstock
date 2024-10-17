@@ -50,8 +50,8 @@ test:
     - jupyter server extension list 1>server_extensions 2>&1
     - grep -iE "jupyter_collaboration.*OK" server_extensions
     # labextensions
-    - jupyter labextension list
-    - jupyter labextension list 1>labextensions 2>&1 
+    - jupyter labextension list --verbose
+    - jupyter labextension list --verbose 1>labextensions 2>&1 
     - grep -iE "collaboration-extension.*OK.*jupyter_collaboration" labextensions
 
 about:
