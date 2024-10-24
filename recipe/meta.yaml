@@ -1,7 +1,7 @@
-{% set version = "2.1.4" %}
+{% set version = "2.1.5" %}
 
 # the `if` block helps the bot avoid duplicating this line over and over...
-{% if 1 %}{% set jupyterlab_version = ">=4.0.5,<4.2" %}{% endif %}
+{% if 1 %}{% set jupyterlab_version = ">=4.0.5" %}{% endif %}
 
 package:
   name: jupyter-collaboration
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: 613df0ad343c8a6b932bccde25bc2c707b5ac2daaca5fd6822d1b330c7e0e62a
+  sha256: 24d0db0124786850e82342e7d74ce694eb548e0aef29024227131e30d0fbae1d
 
 build:
   number: 0
