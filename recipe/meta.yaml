@@ -1,4 +1,4 @@
-{% set version = "2.1.5" %}
+{% set version = "3.0.0" %}
 
 # the `if` block helps the bot avoid duplicating this line over and over...
 {% if 1 %}{% set jupyterlab_version = ">=4.0.5" %}{% endif %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: 24d0db0124786850e82342e7d74ce694eb548e0aef29024227131e30d0fbae1d
+  sha256: 79ec00b21fc423c0d5e053568231214fad5151b69813ab2e3809f2e1b7f5082c
 
 build:
   number: 0
@@ -51,7 +51,7 @@ test:
     - jupyter labextension list
     # check
     - jupyter server extension list 1>server_extensions 2>&1
-    - jupyter labextension list 1>labextensions 2>&1 
+    - jupyter labextension list 1>labextensions 2>&1
     - grep -iE "jupyter_collaboration.*OK" server_extensions
     - grep -iE "collaboration-extension.*OK.*jupyter_collaboration" labextensions
 
