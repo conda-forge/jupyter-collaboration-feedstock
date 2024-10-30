@@ -7,7 +7,7 @@ Home: https://github.com/jupyterlab/jupyter-collaboration
 
 Package license: BSD-3-Clause
 
-Summary: A Jupyter extension providing support for collaborative features in JupyterLab
+Summary: JupyterLab/Jupyter Notebook 7+ Real Time Collaboration extension (metapackage)
 
 Documentation: https://jupyterlab-realtime-collaboration.readthedocs.io
 
