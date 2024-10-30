@@ -23,8 +23,6 @@ requirements:
     - jupyter-docprovider >=1.0.0
     - jupyter_server_ydoc >=1.0.0
     - python >=3.8
-  run_constrained:
-    - jupyterlab >=4.2,<5
 
 test:
   imports:
