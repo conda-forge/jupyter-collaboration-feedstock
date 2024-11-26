@@ -1,4 +1,5 @@
 {% set version = "3.0.1" %}
+{% set python_min = python_min | default("3.9") %}
 
 package:
   name: jupyter-collaboration
@@ -17,19 +18,20 @@ requirements:
   host:
     - hatchling >=1.4.0
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - jupyter-collaboration-ui >=1.0.0
-    - jupyter-docprovider >=1.0.0
-    - jupyter_server_ydoc >=1.0.0
-    - python >=3.8
+    - jupyter_server_ydoc >=1.0.1
+    - jupyter-collaboration-ui >=1.0.1
+    - jupyter-docprovider >=1.0.1
+    - python >={{ python_min }}
 
 test:
   imports:
     - jupyter_collaboration
   requires:
-    - pip
     - jupyterlab
+    - pip
+    - python {{ python_min }}
     - m2-grep  # [win]
   commands:
     - pip check
