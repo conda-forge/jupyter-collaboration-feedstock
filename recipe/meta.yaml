@@ -1,12 +1,12 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: jupyter-collaboration
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
-  sha256: 79ec00b21fc423c0d5e053568231214fad5151b69813ab2e3809f2e1b7f5082c
+  url: https://pypi.org/packages/source/j/jupyter-collaboration/jupyter_collaboration-{{ version }}.tar.gz
+  sha256: 7f09e80236bfdcfe50f8af31d7ee472d45887687de6cdc71c7a3dd4052198cd5
 
 build:
   number: 0
