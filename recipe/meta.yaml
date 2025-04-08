@@ -20,9 +20,9 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - jupyter_server_ydoc >=1.1.0
-    - jupyter-collaboration-ui >=1.1.0
-    - jupyter-docprovider >=1.1.0
+    - jupyter_server_ydoc >=1.1.0,<2
+    - jupyter-collaboration-ui >=1.1.0,<2
+    - jupyter-docprovider >=1.1.0,<2
     - python >={{ python_min }}
 
 test:
