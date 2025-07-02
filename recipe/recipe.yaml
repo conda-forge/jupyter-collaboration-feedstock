@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.0.2"
+  version: "4.1.0"
 
 package:
   name: jupyter-collaboration
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-collaboration/jupyter_collaboration-${{ version }}.tar.gz
-  sha256: 3172858aec0edfa4d91ac2e57a6454bb2d38256fc60963157604412054d0ba21
+  sha256: bd77bed554dc22fe44c6ab9014acb5553068cf5d4b82c165f347fb7591d5d303
 
 build:
   number: 0
