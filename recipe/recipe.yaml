@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.1.1"
+  version: "3.1.2"
 
 package:
   name: jupyter-collaboration
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-collaboration/jupyter_collaboration-${{ version }}.tar.gz
-  sha256: 6f7eae3065959fdd6b55035f973dee423f20f937934a35a40effb680aae89b18
+  sha256: 44fc022b4a4f17362a4ba80a50592f4599ce3c04ef65f5cd2b5ed503a362db41
 
 build:
   number: 0
@@ -23,9 +23,9 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - jupyter_server_ydoc >=1.1.1,<2
-    - jupyter-collaboration-ui >=1.1.1,<2
-    - jupyter-docprovider >=1.1.1,<2
+    - jupyter_server_ydoc >=1.1.2,<2
+    - jupyter-collaboration-ui >=1.1.2,<2
+    - jupyter-docprovider >=1.1.2,<2
     - python >=${{ python_min }}
 
 tests:
