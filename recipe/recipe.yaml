@@ -30,7 +30,9 @@ requirements:
   run:
     - jupyter_server_ydoc >=2.3.0,<3
     - jupyter-collaboration-ui >=2.3.0,<3
-    - jupyter-docprovider >=2.3.0,<3
+- jupyter_server_ydoc >=2.4.0,<3
+- jupyter-collaboration-ui >=2.4.0,<3
+- jupyter-docprovider >=2.4.0,<3
     - jupyterlab >=${{ jupyterlab_min }},<${{ jupyterlab_max }}
     - python >=${{ python_min }}
 
