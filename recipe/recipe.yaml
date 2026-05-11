@@ -3,6 +3,8 @@ schema_version: 1
 
 context:
   version: "4.4.0"
+  lib_min: "2.4.0"
+  lib_max: "3"
   python_check_max: "3.14"
   jupyterlab_min: "4.5.0"
   jupyterlab_max: "5.0"
@@ -28,11 +30,9 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - jupyter_server_ydoc >=2.3.0,<3
-    - jupyter-collaboration-ui >=2.3.0,<3
-- jupyter_server_ydoc >=2.4.0,<3
-- jupyter-collaboration-ui >=2.4.0,<3
-- jupyter-docprovider >=2.4.0,<3
+    - jupyter_server_ydoc >=${{ lib_min }},<${{ lib_max }}
+    - jupyter-collaboration-ui >=${{ lib_min }},<${{ lib_max }}
+    - jupyter-docprovider >=${{ lib_min }},<${{ lib_max }}
     - jupyterlab >=${{ jupyterlab_min }},<${{ jupyterlab_max }}
     - python >=${{ python_min }}
 
